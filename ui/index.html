@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="">
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+
+<div class="spectate">
+	<img class='banner'  id='banner' src="https://i.imgur.com/EB8ozwT.png">
+	<div class="header"><h2>5mthg.com </h2><i class="fa fa-times" id="close"></i></div>
+	<div class="users"></div>
+	<button onclick="settingsbutton()">Settings</button>
+	<button onclick="specfans()">Spectate Only Fans</button>
+	<a>Don't spectate players in the lobby: </a><input type="checkbox">
+</div>
+
+<div class="settings" id="settingsz" >
+	<div style="background-color: #282828;"><h2>Settings  <i class="fa fa-wrench" style="color:#f03a17 ;" aria-hidden="true"></i></h2></div>
+	<ol>
+		<a id="description_upload">Banner URL</a> <input id="file-input" type="text" name="name" onclick="ValueFromUser()" onchange="Updatebanner()" value="https://i.imgur.com/EB8ozwT.png"/><br>
+		<a id="description_upload">Spectate Time</a> <input type="range" min="10" max="60" value="15" id="spectimeslider"/><a><i class="fa fa-clock-o" style="color:#f03a17 ;" aria-hidden="true"> </i><span id="slidertime"></span> sec</a><br>
+	</ol>
+	<div style="background-color: #282828;"><h2>Fan Group  <i class="fa fa-wrench" style="color:#f03a17 ;" aria-hidden="true"></i></h2></div>
+	<ol>
+		<a>Group ID</a> <input type="text" name="name" value="Discord Role ID"/><br>
+		
+	</ol>
+
+	<button onclick="saveeverything()">Save</button>
+</div>
+
+<script>
+	var slider = document.getElementById("spectimeslider");
+	var output = document.getElementById("slidertime");
+	output.innerHTML = slider.value;
+	
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
+
+</script>
+
+
+</body>
+</html>
