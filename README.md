@@ -12,17 +12,17 @@ Check out a demo of Big Brother in action here: [Video](https://www.youtube.com/
 ## Installation
 1. Download or clone the repository:
    ```bash
-   git clone https://github.com//iLeaksy/leaksy_bigbrother/big_brother.git
+   git clone https://github.com//iLeaksy/leaksy_bigbrother.git
    ```
 
 2. Add the script to your **FiveM** resource folder:
    ```bash
-   /resources/[esx]/big_brother
+   /resources/[esx]/leaksy_bigbrother
    ```
 
 3. Add the resource to your server config file (`server.cfg`):
    ```bash
-   ensure big_brother
+   ensure leaksy_bigbrother
    ```
 
 4. Configure the script in the `config.lua` file to suit your server's needs.
